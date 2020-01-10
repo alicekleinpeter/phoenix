@@ -1,0 +1,5 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb"]
+}
+// https://www.robinwieruch.de/webpack-eslint
