@@ -2,16 +2,23 @@ module.exports = {
     // 1
     entry: './src/index.js',
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(js)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader', 'eslint-loader']
-            }
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ],
+            },
         ]
     },
     resolve: {
-        extensions: ['*', '.js']
+        extensions: ['*', '.js', '.css'],
     },
     // 2
     output: {
