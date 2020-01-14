@@ -17,5 +17,28 @@
         <![endif]-->
         <h1>Welcome to Tip Calculator</h1>
         <script src="./bundle.js" async defer></script>
+        <h2>
+            Use the tip calculator to quickly determine an appropriate amount to tip
+            based on the total cost of your meal and the service delivered! 
+            Suggestion: Always aim high!
+        </h2>
+        <form>
+            <input class="form-control" name="" value="" type="text" placeholder="Enter Amount">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value=15>
+                <label class="form-check-label" for="inlineRadio1">15%</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value=20>
+                <label class="form-check-label" for="inlineRadio2">20%</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value=30>
+                <label class="form-check-label" for="inlineRadio3">30%</label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="Calculate-Total">Calculate</button>
+        </form>
+
+        <div class='display-tip'></div>
     </body>
 </html>
