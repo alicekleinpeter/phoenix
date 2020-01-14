@@ -28,8 +28,13 @@ document.getElementById('Calculate-Total').onclick = function (e) {
 }
 
 function showTip(amountToTip) {
-  console.log(document.getElementsByClassName('display-tip')[0]);
-  document.getElementsByClassName('display-tip')[0].innerHTML += 'We suggest you tip: $' + amountToTip;;
+  var displayTip = document.getElementsByClassName('display-tip')[0];
+  var suggestText = 'We suggest you tip: $ ';
+  if (displayTip.innerHTML === '') {
+    displayTip.innerHTML += suggestText + amountToTip;
+  } else {
+    displayTip.innerHTML = suggestText + amountToTip;
+  }
 }
 
 function checkRadioButton() {
