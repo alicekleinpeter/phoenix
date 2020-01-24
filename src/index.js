@@ -5,6 +5,8 @@ console.log('Your project is set up');
 // next move it to the project script folder
 const Handlebars = require('handlebars');
 
+var equation = [];
+
 document.getElementById('Calculate-Total').onclick = function (e) {
   e.preventDefault();
   var tipPercent = checkRadioButton();
@@ -39,6 +41,7 @@ function showTip(amountToTip) {
 
 function checkRadioButton() {
   var radioSelected = document.querySelectorAll('input[type="radio"]:checked')[0];
+
   if (radioSelected) {
     var tipAmount = parseInt(radioSelected.value, 10);
     var tipPercentage = tipAmount / 100;
