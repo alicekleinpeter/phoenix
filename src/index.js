@@ -39,7 +39,6 @@ function showTip(amountToTip) {
 
 function checkRadioButton() {
   var radioSelected = document.querySelectorAll('input[type="radio"]:checked')[0];
-
   if (radioSelected) {
     var tipAmount = parseInt(radioSelected.value, 10);
     var tipPercentage = tipAmount / 100;
