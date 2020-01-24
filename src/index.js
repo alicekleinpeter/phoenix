@@ -5,7 +5,25 @@ console.log('Your project is set up');
 // next move it to the project script folder
 const Handlebars = require('handlebars');
 
-var equation = [];
+var radioButtons = document.querySelectorAll('.form-check-input');
+radioButtons.forEach(function (button) {
+  button.addEventListener('click', function() {
+    if (button.checked) {
+      button.parentElement.classList.toggle('checked'); 
+      uncheckOtherBoxes();
+    }
+  });
+});
+
+function uncheckOtherBoxes() {
+  radioButtons.forEach(function(button) {
+    if (!button.checked) {
+      button.parentElement.classList.remove('checked');
+    }
+  });
+}
+
+
 
 document.getElementById('Calculate-Total').onclick = function (e) {
   e.preventDefault();
